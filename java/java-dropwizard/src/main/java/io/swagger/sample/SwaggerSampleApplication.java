@@ -1,7 +1,7 @@
 package io.swagger.sample;
 
 import io.dropwizard.bundles.webjars.WebJarBundle;
-import io.swagger.jaxrs.config.*;
+import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.config.*;
 
@@ -37,6 +37,6 @@ public class SwaggerSampleApplication extends Application <SwaggerSampleConfigur
     config.setTitle("Swagger sample app");
     config.setVersion("1.0.0");
     config.setResourcePackage("io.swagger.sample.resource");
-    config.setScan(true);
+//    config.setScan(true);
   }
 }
