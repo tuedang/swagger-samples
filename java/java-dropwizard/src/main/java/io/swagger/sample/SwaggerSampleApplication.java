@@ -1,5 +1,6 @@
 package io.swagger.sample;
 
+import io.dropwizard.bundles.webjars.WebJarBundle;
 import io.swagger.jaxrs.config.*;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.config.*;
@@ -17,7 +18,9 @@ public class SwaggerSampleApplication extends Application <SwaggerSampleConfigur
   }
 
   @Override
-  public void initialize(Bootstrap<SwaggerSampleConfiguration> bootstrap) { }
+  public void initialize(Bootstrap<SwaggerSampleConfiguration> bootstrap) {
+    bootstrap.addBundle(new WebJarBundle());
+  }
 
   @Override   
   public String getName() {
